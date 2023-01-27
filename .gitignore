@@ -67,3 +67,5 @@ deno-test.ts
 
 # vim swp file
 *.swp
+
+.DS_Store

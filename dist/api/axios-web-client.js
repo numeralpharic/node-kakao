@@ -38,7 +38,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
         }
         fillHeader(header) {
             var _a;
-            header['Host'] = this.host;
+            header["Host"] = this.host;
             (_a = this._decorator) === null || _a === void 0 ? void 0 : _a.fillHeader(header);
         }
         buildAxiosReqData(method, header) {
@@ -50,9 +50,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
                 // https://github.com/axios/axios/issues/811
                 // https://github.com/axios/axios/issues/907
                 transformResponse: (data) => data,
-                responseType: 'arraybuffer',
+                responseType: "arraybuffer",
                 maxContentLength: 100000000,
-                maxBodyLength: 100000000
+                maxBodyLength: 100000000,
             };
             if (header)
                 Object.assign(headers, header);
@@ -79,6 +79,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
                 Object.assign(reqData.headers, formData.getHeaders());
                 reqData.data = formData.getBuffer();
             }
+            else {
+                throw new Error("Form data and headers are required for multipart request");
+            }
             const res = await axios_1.default.request(reqData);
             if (res.status !== 200) {
                 throw new Error(`Web request failed with status ${res.status} ${res.statusText}`);
@@ -88,12 +91,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
         convertToMultipart(form) {
             const formData = new form_data_1.default();
             for (const [key, value] of Object.entries(form)) {
-                if (value && value.value && value.options) {
+                if (value && value.value &&
+                    value.options) {
                     const file = value;
                     formData.append(key, Buffer.from(file.value), file.options);
                 }
                 else {
-                    formData.append(key, value + '');
+                    formData.append(key, value + "");
                 }
             }
             return formData;

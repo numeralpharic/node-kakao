@@ -1,5 +1,5 @@
-import { HeaderDecorator, RequestHeader, RequestMethod, RequestForm, WebClient } from './web-client';
-import FormData from 'form-data';
+import { HeaderDecorator, RequestForm, RequestHeader, RequestMethod, WebClient } from "./web-client";
+import FormData from "form-data";
 /**
  * WebClient implementation wrapped with axios
  */

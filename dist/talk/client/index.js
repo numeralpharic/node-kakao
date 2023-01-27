@@ -45,10 +45,13 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
         constructor(config = {}, loader = loader_1.TalkInMemoryDataLoader, _sessionFactory = new network_1.TalkSessionFactory()) {
             super();
             this._sessionFactory = _sessionFactory;
-            this.pingInterval = 60000;
+            this.pingInterval = 30000;
             this._pingTask = null;
             this._session = null;
-            this._clientSession = new talk_client_session_1.TalkClientSession(this.createSessionProxy(), { ...config_1.DefaultConfiguration, ...config });
+            this._clientSession = new talk_client_session_1.TalkClientSession(this.createSessionProxy(), {
+                ...config_1.DefaultConfiguration,
+                ...config,
+            });
             this._channelList = new talk_channel_list_1.TalkChannelList(this.createSessionProxy(), loader);
             this._clientUser = { userId: bson_1.Long.ZERO };
             this._blockList = new block_1.TalkBlockSession(this.createSessionProxy());
@@ -64,7 +67,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
         }
         get clientUser() {
             if (!this.logon)
-                throw new Error('Cannot access without logging in');
+                throw new Error("Cannot access without logging in");
             return this._clientUser;
         }
         get blockList() {
@@ -78,7 +81,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
         }
         get session() {
             if (this._session == null)
-                throw new Error('Session is not created');
+                throw new Error("Session is not created");
             return this._session;
         }
         async login(credential) {
@@ -123,17 +126,17 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
         async pushReceived(method, data, ctx) {
             await this._channelList.pushReceived(method, data, ctx);
             switch (method) {
-                case 'KICKOUT': {
-                    super.emit('disconnected', data.reason);
+                case "KICKOUT": {
+                    super.emit("disconnected", data.reason);
                     this.close();
                     break;
                 }
-                case 'CHANGESVR': {
-                    super.emit('switch_server');
+                case "CHANGESVR": {
+                    super.emit("switch_server");
                     break;
                 }
             }
-            super.emit('push_packet', method, data);
+            super.emit("push_packet", method, data);
         }
         /**
          * Create proxy that can be used safely without exposing client
@@ -164,8 +167,8 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
             }
         }
         onError(err) {
-            super.emit('error', err);
-            if (this.listeners('error').length > 0 && !this.session.stream.ended) {
+            super.emit("error", err);
+            if (this.listeners("error").length > 0 && !this.session.stream.ended) {
                 this.listen();
             }
             else {
@@ -190,7 +193,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
             const pingHandler = () => {
                 if (!this.logon)
                     return;
-                this.session.request('PING', {}).catch((err) => this.onError(err));
+                this.session.request("PING", {}).catch((err) => this.onError(err));
                 // Fix weird nodejs typing
                 this._pingTask = setTimeout(pingHandler, this.pingInterval);
             };
