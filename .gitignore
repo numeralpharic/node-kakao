@@ -61,6 +61,7 @@ typings/
 .next
 
 docs/
+dist/
 dist_esm/
 loco-test.ts
 deno-test.ts

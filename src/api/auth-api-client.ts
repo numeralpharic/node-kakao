@@ -193,7 +193,7 @@ export class AuthApiClient {
    * @param {LoginForm} form
    * @param {boolean} [forced=false] If true, force login even other devices are login
    */
-  async login(form: LoginForm, forced: boolean = false): AsyncCommandResult<LoginData> {
+  async login(form: LoginForm, forced = false): AsyncCommandResult<LoginData> {
     const res = await this._client.requestData(
       'POST',
       this.getApiPath('login.json'),
@@ -215,7 +215,7 @@ export class AuthApiClient {
    * @param {TokenLoginForm} form
    * @param {boolean} [forced=false] If true, force login even other devices are login
    */
-  async loginToken(form: TokenLoginForm, forced: boolean = false): AsyncCommandResult<LoginData> {
+  async loginToken(form: TokenLoginForm, forced = false): AsyncCommandResult<LoginData> {
     const res = await this._client.requestData(
       'POST',
       this.getApiPath('login.json'),

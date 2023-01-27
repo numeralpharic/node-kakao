@@ -1,6 +1,6 @@
 {
-  "name": "node-kakao",
-  "version": "4.5.2",
+  "name": "@numeralpharic/node-kakao",
+  "version": "4.5.3",
   "description": "Loco protocol compatible library",
   "main": "./dist/index.js",
   "exports": {
@@ -30,9 +30,8 @@
     "loco-protocol"
   ],
   "author": {
-    "name": "storycraft",
-    "email": "storycraft@pancake.sh",
-    "url": "https://pancake.sh"
+    "name": "numeralpharic",
+    "email": "numeralpharic"
   },
   "license": "MIT",
   "devDependencies": {
@@ -55,7 +54,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/storycraft/node-kakao.git"
+    "url": "https://github.com/numeralpharic/node-kakao.git"
   },
   "dependencies": {
     "axios": "^0.24.0",
