@@ -3,7 +3,7 @@
 # NodeKakao - Loco protocol compatible library
 
 ```js
-const node_kakao = require("node-kakao");
+const node_kakao = require("@numeralpharic/node-kakao");
 ```
 
 Node
