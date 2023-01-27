@@ -41,7 +41,7 @@ export declare enum KnownDataStatusCode {
     UPDATE_REQUIRED = -999,
     SERVER_UNDER_MAINTENANCE = -9797
 }
-export declare type DataStatusCode = KnownDataStatusCode | number;
+export type DataStatusCode = KnownDataStatusCode | number;
 export interface ResponseState {
     status: DataStatusCode;
 }
@@ -66,7 +66,7 @@ interface CommandResultDoneValue<T> extends RootCommandResult {
 interface CommandResultDoneVoid extends RootCommandResult {
     readonly success: true;
 }
-export declare type CommandResultDone<T = void> = (T extends void ? CommandResultDoneVoid : CommandResultDoneValue<T>);
-export declare type CommandResult<T = void> = CommandResultFailed | CommandResultDone<T>;
-export declare type AsyncCommandResult<T = void> = Promise<CommandResult<T>>;
+export type CommandResultDone<T = void> = (T extends void ? CommandResultDoneVoid : CommandResultDoneValue<T>);
+export type CommandResult<T = void> = CommandResultFailed | CommandResultDone<T>;
+export type AsyncCommandResult<T = void> = Promise<CommandResult<T>>;
 export {};

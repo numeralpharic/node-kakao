@@ -7,7 +7,7 @@ import { OpenChannelEvents, OpenChannelListEvents } from '../event';
 import { Managed } from '../managed';
 import { ChannelListUpdater } from '../channel/talk-channel-handler';
 import { OpenChannelUserInfo } from '../../user';
-declare type TalkOpenChannelEvents<T> = OpenChannelEvents<T, OpenChannelUserInfo>;
+type TalkOpenChannelEvents<T> = OpenChannelEvents<T, OpenChannelUserInfo>;
 /**
  * Capture and handle pushes coming to open channel
  */

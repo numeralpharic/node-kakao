@@ -13,7 +13,7 @@ import { ChannelMetaType, GroupMetaContent, LiveTalkCountMetaContent, LiveTalkIn
 import { ChatOnRoomRes } from '../../packet/chat';
 import { MediaUploadTemplate } from '../media/upload';
 import { FixedReadStream } from '../../stream';
-declare type TalkChannelEvents = ChannelEvents<TalkNormalChannel, NormalChannelUserInfo>;
+type TalkChannelEvents = ChannelEvents<TalkNormalChannel, NormalChannelUserInfo>;
 export declare class TalkNormalChannel extends TypedEmitter<TalkChannelEvents> implements TalkChannel, ChannelDataStore<NormalChannelInfo, NormalChannelUserInfo>, Managed<TalkChannelEvents> {
     private _channel;
     private _chatListStore;

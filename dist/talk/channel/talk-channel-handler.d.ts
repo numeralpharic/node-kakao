@@ -5,7 +5,7 @@ import { ChannelEvents, ChannelListEvent } from '../event';
 import { AsyncCommandResult, DefaultRes } from '../../request';
 import { ChannelUserInfo } from '../../user';
 import { Managed } from '../managed';
-declare type TalkChannelHandlerEvents<T extends Channel> = ChannelEvents<T, ChannelUserInfo>;
+type TalkChannelHandlerEvents<T extends Channel> = ChannelEvents<T, ChannelUserInfo>;
 /**
  * Capture and handle pushes coming to channel
  */

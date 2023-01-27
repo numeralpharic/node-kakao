@@ -19,4 +19,4 @@ export declare enum KnownFeedType {
     OPENLINK_HAND_OVER_HOST = 15,
     TEAM_CHANNEL_EVENT = 18
 }
-export declare type FeedType = KnownFeedType | number;
+export type FeedType = KnownFeedType | number;

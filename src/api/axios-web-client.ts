@@ -96,7 +96,7 @@ export class AxiosWebClient implements WebClient, HeaderDecorator {
     const reqData = this.buildAxiosReqData(method, headers);
     reqData.url = this.toApiURL(path);
 
-    if (form) {
+    if (form && reqData?.headers) {
       const formData = this.convertToMultipart(form);
       Object.assign(reqData.headers, formData.getHeaders());
       reqData.data = formData.getBuffer();

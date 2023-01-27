@@ -74,7 +74,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
         async requestMultipart(method, path, form, headers) {
             const reqData = this.buildAxiosReqData(method, headers);
             reqData.url = this.toApiURL(path);
-            if (form) {
+            if (form && (reqData === null || reqData === void 0 ? void 0 : reqData.headers)) {
                 const formData = this.convertToMultipart(form);
                 Object.assign(reqData.headers, formData.getHeaders());
                 reqData.data = formData.getBuffer();

@@ -37,7 +37,7 @@ export interface OpenLinkUserInfo extends OpenLinkComponent, OpenTokenComponent,
      */
     perm: OpenChannelUserPerm;
 }
-declare type OpenChannelUserInfoMix = OpenLinkComponent & OpenChannelUserInfo;
+type OpenChannelUserInfoMix = OpenLinkComponent & OpenChannelUserInfo;
 export interface OpenLinkChannelUserInfo extends OpenLinkUserInfo, OpenChannelUserInfoMix {
 }
 export {};

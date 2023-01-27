@@ -20,7 +20,7 @@ export interface TalkSession extends CommandSession {
     readonly clientUser: Readonly<ChannelUser>;
     readonly configuration: Readonly<ClientConfig>;
 }
-declare type TalkClientEvents = ClientEvents<TalkChannel, ChannelUserInfo>;
+type TalkClientEvents = ClientEvents<TalkChannel, ChannelUserInfo>;
 /**
  * Simple client implementation.
  */

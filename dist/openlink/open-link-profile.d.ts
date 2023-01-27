@@ -20,8 +20,8 @@ export interface OpenLinkMainProfile {
 /**
  * Link profile template
  */
-export declare type OpenLinkLinkProfile = OpenLinkComponent;
-export declare type OpenLinkProfiles = OpenLinkAnonProfile | OpenLinkMainProfile | OpenLinkLinkProfile;
+export type OpenLinkLinkProfile = OpenLinkComponent;
+export type OpenLinkProfiles = OpenLinkAnonProfile | OpenLinkMainProfile | OpenLinkLinkProfile;
 export declare namespace OpenLinkProfile {
     /**
      * Serialize template to packet key / value structure.

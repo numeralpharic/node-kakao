@@ -14,7 +14,7 @@ export declare enum KnownChannelMetaType {
     OPEN_CHANNEL_CHAT = 13,
     BOT = 14
 }
-export declare type ChannelMetaType = KnownChannelMetaType | number;
+export type ChannelMetaType = KnownChannelMetaType | number;
 export declare enum ChannelClientMetaType {
     UNDEFINED = "undefined",
     NAME = "name",
@@ -68,7 +68,7 @@ export interface LiveTalkInfoOnMetaContent {
 export interface LiveTalkInfoOffMetaContent extends Partial<LiveTalkInfoOnMetaContent> {
     liveon: false;
 }
-export declare type LiveTalkInfoMetaContent = LiveTalkInfoOnMetaContent | LiveTalkInfoOffMetaContent;
+export type LiveTalkInfoMetaContent = LiveTalkInfoOnMetaContent | LiveTalkInfoOffMetaContent;
 export interface LiveTalkCountMetaContent {
     count: number;
 }
@@ -86,7 +86,7 @@ export interface BotAddCommandStruct extends BotCommandStruct {
     updatedAt: number;
     botId: Long;
 }
-export declare type BotDelCommandStruct = BotCommandStruct;
+export type BotDelCommandStruct = BotCommandStruct;
 export interface BotMetaContent {
     add?: BotAddCommandStruct[];
     update?: BotAddCommandStruct[];

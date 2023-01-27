@@ -23,7 +23,7 @@ export interface WebApiConfig {
     language: string;
     deviceModel: string;
 }
-export declare type SessionConfig = CheckinConfig;
+export type SessionConfig = CheckinConfig;
 export interface ClientConfig extends SessionConfig, WebApiConfig {
     deviceType: number;
 }

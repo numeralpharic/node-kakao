@@ -4,7 +4,7 @@ export declare enum ChatRefererType {
     KAKAOI = 1,
     BOT = 2
 }
-export declare type ChatReferer = ChatRefererType | number;
+export type ChatReferer = ChatRefererType | number;
 /**
  * Chat object
  */

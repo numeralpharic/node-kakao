@@ -11,7 +11,7 @@ import { TalkOpenChannel } from './talk-open-channel';
 import { OpenLinkUpdater } from './talk-open-link-handler';
 import { OpenChannelUserInfo } from '../../user';
 import { ClientDataLoader } from '../../loader';
-export declare type TalkOpenChannelListEvents = OpenChannelListEvents<TalkOpenChannel, OpenChannelUserInfo>;
+export type TalkOpenChannelListEvents = OpenChannelListEvents<TalkOpenChannel, OpenChannelUserInfo>;
 /**
  * Manage open profile, channel.
  */

@@ -2,16 +2,16 @@ import { Long } from 'bson';
 import { WebApiConfig } from '../config';
 import { OAuthCredential } from '../oauth';
 import { DefaultRes } from '../request';
-export declare type RequestHeader = Record<string, string>;
-export declare type RequestMethod = 'GET' | 'DELETE' | 'HEAD' | 'OPTIONS' | 'POST' | 'PUT' | 'PATCH' | 'LINK' | 'UNLINK';
-export declare type FileRequestData = {
+export type RequestHeader = Record<string, string>;
+export type RequestMethod = 'GET' | 'DELETE' | 'HEAD' | 'OPTIONS' | 'POST' | 'PUT' | 'PATCH' | 'LINK' | 'UNLINK';
+export type FileRequestData = {
     value: Uint8Array;
     options: {
         filename: string;
         contentType?: string;
     };
 };
-export declare type RequestForm = {
+export type RequestForm = {
     [key: string]: FileRequestData | number | string | undefined | null | boolean | Long;
 };
 /**

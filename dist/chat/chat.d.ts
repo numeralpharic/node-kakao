@@ -26,7 +26,7 @@ export interface Chat extends ChatTypeComponent {
      */
     supplement?: Record<string, unknown>;
 }
-export declare type TypedChat<T extends ChatType> = Chat & ChatTypeComponent<T>;
+export type TypedChat<T extends ChatType> = Chat & ChatTypeComponent<T>;
 export interface ChatLogged {
     /**
      * chat id on server
@@ -58,7 +58,7 @@ export interface ChatWritten extends Chat {
 }
 export interface Chatlog extends ChatLogLinked, ChatWritten {
 }
-export declare type TypedChatlog<T extends ChatType> = Chatlog & TypedChat<T>;
+export type TypedChatlog<T extends ChatType> = Chatlog & TypedChat<T>;
 export interface ChatOptions {
     /**
      * Shout option that can be used on OpenChat

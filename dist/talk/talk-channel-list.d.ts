@@ -11,7 +11,7 @@ import { TalkOpenChannel, TalkOpenChannelList } from './openlink';
 import { TalkChannel, TalkNormalChannel, TalkNormalChannelList } from './channel';
 import { ChannelUserInfo } from '../user';
 import { ClientDataLoader } from '../loader';
-declare type TalkChannelListEvents = ChannelListEvents<TalkChannel, ChannelUserInfo>;
+type TalkChannelListEvents = ChannelListEvents<TalkChannel, ChannelUserInfo>;
 /**
  * Manage normal channels and open channels
  */

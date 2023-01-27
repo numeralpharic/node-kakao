@@ -44,10 +44,10 @@ export interface ClientEvent {
     'push_packet': (method: string, data: DefaultRes) => void;
     'error': (error: unknown) => void;
 }
-export declare type ClientEvents<T, U> = ClientEvent & ChannelListEvents<T, U>;
-export declare type ChannelListEvents<T, U> = OpenChannelListEvents<T, U> & NormalChannelListEvents<T, U> & RootChannelListEvent<T>;
-export declare type NormalChannelListEvents<T, U> = ChannelListEvent<T> & ChannelEvents<T, U>;
-export declare type OpenChannelListEvents<T, U> = OpenLinkListEvents & ChannelListEvent<T> & OpenChannelEvents<T, U> & OpenChannelListEvent<T>;
-export declare type OpenLinkListEvents = OpenLinkEvent;
-export declare type ChannelEvents<T, U> = ChannelEvent<T, U> & ChatEvent<T, U>;
-export declare type OpenChannelEvents<T, U> = ChannelEvents<T, U> & OpenChannelEvent<T, U>;
+export type ClientEvents<T, U> = ClientEvent & ChannelListEvents<T, U>;
+export type ChannelListEvents<T, U> = OpenChannelListEvents<T, U> & NormalChannelListEvents<T, U> & RootChannelListEvent<T>;
+export type NormalChannelListEvents<T, U> = ChannelListEvent<T> & ChannelEvents<T, U>;
+export type OpenChannelListEvents<T, U> = OpenLinkListEvents & ChannelListEvent<T> & OpenChannelEvents<T, U> & OpenChannelListEvent<T>;
+export type OpenLinkListEvents = OpenLinkEvent;
+export type ChannelEvents<T, U> = ChannelEvent<T, U> & ChatEvent<T, U>;
+export type OpenChannelEvents<T, U> = ChannelEvents<T, U> & OpenChannelEvent<T, U>;

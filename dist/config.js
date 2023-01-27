@@ -20,9 +20,9 @@
         locoBookingPort: 443,
         // eslint-disable-next-line max-len
         locoPEMPublicKey: `-----BEGIN PUBLIC KEY-----\nMIIBIDANBgkqhkiG9w0BAQEFAAOCAQ0AMIIBCAKCAQEApElgRBx+g7sniYFW7LE8ivrwXShKTRFV8lXNItMXbN5QSC8vJ/cTSOTS619Xv5Zx7xXJIk4EKxtWesEGbgZpEUP2xQ+IeH9oz0JxayEMvvD1nVNAWgpWE4pociEoArsK7qY3YwXb1CiDHo9hojLv7djbo3cwXvlyMh4TUrX2RjCZPlVJxk/LVjzcl9ohJLkl3eoSrf0AE4kQ9mk3+raEhq5Dv+IDxKYX+fIytUWKmrQJusjtre9oVUX5sBOYZ0dzez/XapusEhUWImmB6mciVXfRXQ8IK4IH6vfNyxMSOTfLEhRYN2SMLzplAYFiMV536tLS3VmG5GJRdkpDubqPeQIBAw==\n-----END PUBLIC KEY-----`,
-        agent: 'win32',
-        version: '3.4.2',
-        appVersion: '3.4.2.3187',
+        agent: 'android',
+        version: '9.2.1',
+        appVersion: '9.2.1',
         osVersion: '10.0',
         // 2 == sub, 1 == main
         deviceType: 2,
@@ -33,8 +33,8 @@
         countryIso: 'KR',
         language: 'ko',
         subDevice: true,
-        deviceModel: '',
-        loginTokenSeedList: ['PITT', 'INORAN'],
+        deviceModel: 'SM-T976N',
+        loginTokenSeedList: ['WINTER', 'ARTHUR'],
     };
 });
 //# sourceMappingURL=config.js.map

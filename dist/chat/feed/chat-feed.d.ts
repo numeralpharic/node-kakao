@@ -25,24 +25,24 @@ export interface ChatFeed<T extends FeedType = FeedType> {
     readonly feedType: T;
     readonly hidden?: boolean;
 }
-export declare type InviteFeed = ChatFeed<KnownFeedType.INVITE> & FeedFragment.Inviter & FeedFragment.MemberList;
-export declare type LeaveFeed = ChatFeed<KnownFeedType.LEAVE> & FeedFragment.Member;
-export declare type RichContentFeed = ChatFeed<KnownFeedType.RICH_CONTENT>;
-export declare type OpenJoinFeed = ChatFeed<KnownFeedType.OPENLINK_JOIN> & FeedFragment.MemberList;
-export declare type OpenLinkDeletedFeed = ChatFeed<KnownFeedType.OPENLINK_DELETE_LINK>;
-export declare type OpenRewriteFeed = ChatFeed<KnownFeedType.OPENLINK_REWRITE_FEED> & FeedFragment.Member & FeedFragment.Message;
-export declare type OpenKickFeed = ChatFeed<KnownFeedType.OPENLINK_KICKED> & FeedFragment.Member;
-export declare type OpenHandOverHostFeed = ChatFeed<KnownFeedType.OPENLINK_HAND_OVER_HOST> & FeedFragment.OpenHandOver;
-export declare type OpenManagerGrantFeed = ChatFeed<KnownFeedType.OPEN_MANAGER_GRANT> & FeedFragment.Member;
-export declare type OpenManagerRevokeFeed = ChatFeed<KnownFeedType.OPEN_MANAGER_REVOKE> & FeedFragment.Member;
-export declare type ChannelDeletedFeed = ChatFeed<KnownFeedType.CHANNEL_DELETED>;
-export declare type DeleteAllFeed = ChatFeed<KnownFeedType.DELETE_TO_ALL> & FeedFragment.Message;
-export declare type OpenLinkFeeds = OpenJoinFeed | OpenLinkDeletedFeed | OpenRewriteFeed | OpenKickFeed | OpenHandOverHostFeed | OpenManagerGrantFeed | OpenManagerRevokeFeed;
+export type InviteFeed = ChatFeed<KnownFeedType.INVITE> & FeedFragment.Inviter & FeedFragment.MemberList;
+export type LeaveFeed = ChatFeed<KnownFeedType.LEAVE> & FeedFragment.Member;
+export type RichContentFeed = ChatFeed<KnownFeedType.RICH_CONTENT>;
+export type OpenJoinFeed = ChatFeed<KnownFeedType.OPENLINK_JOIN> & FeedFragment.MemberList;
+export type OpenLinkDeletedFeed = ChatFeed<KnownFeedType.OPENLINK_DELETE_LINK>;
+export type OpenRewriteFeed = ChatFeed<KnownFeedType.OPENLINK_REWRITE_FEED> & FeedFragment.Member & FeedFragment.Message;
+export type OpenKickFeed = ChatFeed<KnownFeedType.OPENLINK_KICKED> & FeedFragment.Member;
+export type OpenHandOverHostFeed = ChatFeed<KnownFeedType.OPENLINK_HAND_OVER_HOST> & FeedFragment.OpenHandOver;
+export type OpenManagerGrantFeed = ChatFeed<KnownFeedType.OPEN_MANAGER_GRANT> & FeedFragment.Member;
+export type OpenManagerRevokeFeed = ChatFeed<KnownFeedType.OPEN_MANAGER_REVOKE> & FeedFragment.Member;
+export type ChannelDeletedFeed = ChatFeed<KnownFeedType.CHANNEL_DELETED>;
+export type DeleteAllFeed = ChatFeed<KnownFeedType.DELETE_TO_ALL> & FeedFragment.Message;
+export type OpenLinkFeeds = OpenJoinFeed | OpenLinkDeletedFeed | OpenRewriteFeed | OpenKickFeed | OpenHandOverHostFeed | OpenManagerGrantFeed | OpenManagerRevokeFeed;
 /**
  * Feed is special chat marker
  */
-export declare type KnownChatFeeds = InviteFeed | LeaveFeed | RichContentFeed | OpenLinkFeeds | ChannelDeletedFeed | DeleteAllFeed;
-export declare type ChatFeeds = KnownChatFeeds | Record<string, unknown> & ChatFeed;
+export type KnownChatFeeds = InviteFeed | LeaveFeed | RichContentFeed | OpenLinkFeeds | ChannelDeletedFeed | DeleteAllFeed;
+export type ChatFeeds = KnownChatFeeds | Record<string, unknown> & ChatFeed;
 /**
  * Read chat text and deserialize
  *

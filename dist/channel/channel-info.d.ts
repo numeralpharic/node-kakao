@@ -12,7 +12,7 @@ export interface SetChannelMeta extends ChannelMeta {
     authorId: Long;
     updatedAt: number;
 }
-export declare type ChannelMetaMap = Record<ChannelMetaType, SetChannelMeta>;
+export type ChannelMetaMap = Record<ChannelMetaType, SetChannelMeta>;
 /**
  * Common channel info
  */

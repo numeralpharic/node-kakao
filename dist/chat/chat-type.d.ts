@@ -39,7 +39,7 @@ export declare enum KnownChatType {
     OPEN_VOTE = 97,
     OPEN_POST = 98
 }
-export declare type ChatType = KnownChatType | number;
+export type ChatType = KnownChatType | number;
 export declare const DELETED_MESSAGE_OFFSET = 16384;
 export declare function isDeletedChat(type: ChatType): boolean;
 export declare function getOriginalType(type: ChatType): ChatType;

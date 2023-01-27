@@ -15,7 +15,7 @@ import { BotMetaContent, ChannelMetaType, GroupMetaContent, LiveTalkCountMetaCon
 import { ChatOnRoomRes } from '../../packet/chat';
 import { MediaUploadTemplate } from '../media/upload';
 import { FixedReadStream } from '../../stream';
-declare type TalkOpenChannelEvents = OpenChannelEvents<TalkOpenChannel, OpenChannelUserInfo>;
+type TalkOpenChannelEvents = OpenChannelEvents<TalkOpenChannel, OpenChannelUserInfo>;
 export declare class TalkOpenChannel extends TypedEmitter<TalkOpenChannelEvents> implements OpenChannel, ChannelDataStore<OpenChannelInfo, OpenChannelUserInfo>, TalkChannel, OpenChannelSession, Managed<TalkOpenChannelEvents> {
     private _channel;
     private _chatListStore;

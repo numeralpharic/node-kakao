@@ -15,7 +15,7 @@ import { ChannelEvents } from '../event';
 import { GroupMetaContent, LiveTalkCountMetaContent, LiveTalkInfoMetaContent, ProfileMetaContent, TvLiveMetaContent, TvMetaContent } from '../../channel/meta';
 import { Chatlog, ChatLogged, ChatType, UpdatableChatListStore } from '../../chat';
 import { MediaUploadTemplate } from '../media';
-declare type TalkChannelEvents = ChannelEvents<TalkChannel, ChannelUserInfo>;
+type TalkChannelEvents = ChannelEvents<TalkChannel, ChannelUserInfo>;
 /**
  * TalkChannel interface includes managed methods and other methods that make it easier to use
  */

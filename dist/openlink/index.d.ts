@@ -103,7 +103,7 @@ export declare enum KnownLinkPrivilegeMask {
     NON_SPECIAL_LINK = 512,
     USE_BOT = 1024
 }
-export declare type LinkPrivilegeMask = KnownLinkPrivilegeMask | number | Long;
+export type LinkPrivilegeMask = KnownLinkPrivilegeMask | number | Long;
 export interface OpenLinkUpdateTemplate {
     /**
      * link passcode

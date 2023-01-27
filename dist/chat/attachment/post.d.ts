@@ -13,10 +13,10 @@ export declare enum KnownPostItemType {
     VOTE = 9,
     SCRAP = 10
 }
-export declare type PostItemType = KnownPostItemType | number;
+export type PostItemType = KnownPostItemType | number;
 export declare enum KnownPostSubItemType {
 }
-export declare type PostSubItemType = KnownPostSubItemType | number;
+export type PostSubItemType = KnownPostSubItemType | number;
 export declare enum KnownPostFooterStyle {
     ARTICLE = 1,
     SCHEDULE = 2,
@@ -24,7 +24,7 @@ export declare enum KnownPostFooterStyle {
     VOTE = 4,
     VOTE_RESULT = 5
 }
-export declare type PostFooterStyle = KnownPostFooterStyle | number;
+export type PostFooterStyle = KnownPostFooterStyle | number;
 export declare namespace PostItem {
     interface Unknown extends Record<string, unknown> {
         /**

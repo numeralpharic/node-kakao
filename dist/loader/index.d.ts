@@ -9,7 +9,7 @@ export interface ClientDataLoadResult<T> {
      */
     shouldUpdate: boolean;
 }
-export declare type AsyncClientDataLoadResult<T> = Promise<ClientDataLoadResult<T>>;
+export type AsyncClientDataLoadResult<T> = Promise<ClientDataLoadResult<T>>;
 /**
  * Load various client data from memory or disk file
  */

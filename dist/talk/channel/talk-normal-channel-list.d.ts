@@ -9,7 +9,7 @@ import { TalkNormalChannel } from './talk-normal-channel';
 import { ChannelListUpdater } from './talk-channel-handler';
 import { NormalChannelUserInfo } from '../../user';
 import { ClientDataLoader } from '../../loader';
-export declare type TalkNormalChannelListEvents = NormalChannelListEvents<TalkNormalChannel, NormalChannelUserInfo>;
+export type TalkNormalChannelListEvents = NormalChannelListEvents<TalkNormalChannel, NormalChannelUserInfo>;
 /**
  * Manage session channels
  */

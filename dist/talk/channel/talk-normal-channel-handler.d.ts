@@ -5,7 +5,7 @@ import { ChannelEvents } from '../event';
 import { DefaultRes } from '../../request';
 import { NormalChannelUserInfo } from '../../user';
 import { Managed } from '../managed';
-declare type TalkNormalChannelEvents<T extends Channel> = ChannelEvents<T, NormalChannelUserInfo>;
+type TalkNormalChannelEvents<T extends Channel> = ChannelEvents<T, NormalChannelUserInfo>;
 /**
  * Capture and handle pushes coming to channel
  */
